@@ -8,7 +8,7 @@ import { themeColors } from "../theme";
 import Categories from "../components/categories";
 import { featured } from "../constants";
 import FeaturedRow from "../components/featuredRow";
-
+import OfferSlide from "../components/OfferSlide";
 export default function HomeScreen() {
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
@@ -29,34 +29,14 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      <ScrollView contentContainerStyle={{ paddingBottom: 20 }} showsVerticalScrollIndicator={false}>
+      
         <Categories />
-        <View style={tw`mt-5`}>
-          {featured.map((item, index) => (
-            <FeaturedRow key={index} title={item.title} description={item.description} restaurants={item.restaurants} />
-          ))}
-        </View>
-      </ScrollView>
+        <OfferSlide />
+      
     </SafeAreaView>
   );
 }
 
 const style = StyleSheet.create({
-  footer: {
-    height: 70,
-    backgroundColor: "white",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    borderRadius: 0,
-    borderTopWidth: 1,
-    borderTopColor: "#D1D5DB",
-  },
-  viewFooter: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  footerV: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
+
 });

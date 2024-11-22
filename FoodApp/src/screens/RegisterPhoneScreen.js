@@ -43,6 +43,8 @@ export default function RegisterPhoneScreen() {
         <View style={styles.inputPhone}>
           <TextInput
             placeholder="Nhập số diện thoại"
+            keyboardType="number-pad"
+            autoFocus={true}
             onChangeText={(text) => setPhoneNumber(dialcode + text)}
           />
         </View>
